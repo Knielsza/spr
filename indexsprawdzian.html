@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index01</title>
+    <script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <style>
+        .klasa {
+            color: red;
+        }
+
+        .klasa1 {
+            color: blue;
+        }
+
+        .klasa2 {
+            color: violet;
+
+        }
+
+        #aha {
+            background-image: url(https://th.bing.com/th/id/R.2fbb988f573f5b5a2f6ffec738b5cf05?rik=TENoIJPNwOQ4kg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fstar-png-star-icon-1600.png&ehk=w%2buR8esLZsa%2f81YqoT4HTF09Zc3aGJSyWGWd204WWno%3d&risl=&pid=ImgRaw&r=0);
+            color: black;
+        }
+
+        #aha:hover {
+            background-color: gold;
+
+        }
+
+        #aha: {
+            background-attachment: gold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="op-btn" onclick="action()">Dodaj opinię</button>
+    <div id="react-app"></div>
+    <script defer>
+        // import Star from "R.png";
+        var it = 1
+
+        var star = ["★"]
+
+        var button = React.createElement("button", {
+            id: 'aha',
+            style: {
+                width: "50px",
+                height: "50px",
+                display: 'flex',
+                // backgroundColor: "red", // nie: background-color
+                color: "white",
+                fontSize: "40px",
+                margin: "2px",
+                textAlign: 'center',
+                alignItems: 'center'
+
+
+            }
+        },
+            star
+
+        )
+        var square = React.createElement("div", {
+            style: {
+                width: "50px",
+                height: "50px",
+                display: 'flex',
+                backgroundColor: "red", // nie: background-color
+                color: "white",
+                fontSize: "20px",
+                margin: "2px",
+                textAlign: 'center'
+
+            }
+        },
+            button
+        )
+        var row = React.createElement("div",
+            {
+                style: {
+                    border: '1px solid blue',
+                    display: 'flex',
+                    margin: '20px 20px 20px 20px',
+                    // flex-direction: 'row',
+                }
+            },
+            // elements
+            button,
+            button,
+            button,
+            button,
+            button
+        )
+        var container = React.createElement("div",
+            {
+                style: {
+                    border: 'none',
+                    padding: '2px',
+                    display: 'flex'
+
+                    // flex-direction: 'row',
+                }
+            },
+            // elements
+            "Zgodność z opisem",
+            row,
+            "Czas wysyłki",
+            row,
+            "Koszt wysyłki",
+            row,
+            "Obsługa kupującego",
+            row
+        )
+
+
+
+        var table = React.createElement("div",
+            {
+                style: {
+                    width: 'min-content',
+                    border: 'none',
+                    padding: '2px',
+                    // display: 'flex',
+                    // flex- direction: "row",
+                    margin: 'auto auto'
+
+                    // flex-direction: 'row',
+                }
+            },
+            // elements
+            container,
+            container,
+            container,
+            container
+        )
+
+
+
+        // ReactDOM.render(
+        //     table,
+        //     document.getElementById('react-app')
+        // )
+        chleb =
+            [container]
+
+
+        function action() {
+            it = it + 1
+            console.log(it)
+            // chleb.add(chleb)
+            ReactDOM.render(
+                React.createElement("div", {}, chleb),
+                document.getElementById('react-app')
+            )
+        }
+    </script>
+</body>
+
+</html>
